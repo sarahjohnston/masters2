@@ -1,0 +1,25 @@
+<ion-view>
+
+    <ion-nav-title>
+      <img src="img/app_logo2.png" class="headerimage" alt="Glasgow Museums">
+    </ion-nav-title>
+
+  <ion-content>
+    <div class="padding" ng-if="dataError">
+      <p>{{dataError}}</p>
+      <button class="button button-small button-positive" ng-click="searchNews(0)">Try Again</button>
+    </div>
+
+        <ion-list>
+        <ion-item ng-repeat="new in news" class="news-list">
+          <img ng-src="{{new.images}}" style="width: 100%" ui-sref="newsdetail({newsId: news[$index].id, parentView: parentView})">
+              <h2>{{new.exhibition_name}}</h2>
+              <p><i class="ion-android-pin"></i> {{new.museum_name}}<br>
+              <i class="ion-ios-calendar-outline"></i>
+              {{new.start_date | date: 'd MMM yyyy'}} - {{new.end_date | date: 'd MMM yyyy'}}</p>
+        </ion-item>
+       </ion-list>
+
+
+  </ion-content>
+</ion-view>

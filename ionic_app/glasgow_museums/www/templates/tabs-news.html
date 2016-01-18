@@ -1,0 +1,31 @@
+<ion-view view-title="{{title}}">
+	<ion-nav-title>
+       {{title}}
+    </ion-nav-title>
+    <ion-nav-buttons side="left">
+      <a class="button button-icon ion-android-home" ui-sref="tab.home"></a>
+   </ion-nav-buttons>
+   <ion-nav-buttons side="right">
+      <a class="button button-icon ion-android-home transp"></a>
+   </ion-nav-buttons>
+  <ion-content>
+
+	  <div class="padding" ng-if="dataError">
+      <p>{{dataError}}</p>
+      <button class="button button-small button-positive" ng-click="searchNews(id)">Try Again</button>
+    </div>
+
+    <ion-list>
+    <ion-item ng-repeat="new in news" class="news-list">
+      <img ng-src="{{new.images}}" style="width: 100%" ui-sref="news-details({newsId: news[$index].id, referrer: 'news'})">
+          <h2>{{new.exhibition_name}}</h2>
+          <p><i class="ion-android-pin"></i> {{new.museum_name}}<br>
+          <i class="ion-ios-calendar-outline"></i>
+          {{new.start_date | date: 'd MMM yyyy'}} - {{new.end_date | date: 'd MMM yyyy'}}</p>
+    </ion-item>
+   </ion-list>
+
+
+
+  </ion-content>
+</ion-view>

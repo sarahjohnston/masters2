@@ -1,0 +1,43 @@
+<ion-nav-bar>
+  <ion-nav-back-button>
+  </ion-nav-back-button>
+</ion-nav-bar>
+<ion-view view-title="Get Directions">
+
+  <ion-content>
+
+    <label class="item item-input item-select">
+      <div class="input-label">
+        From current location:
+      </div>
+      <select ng-model="direction.currentlocation">
+        <option ng-selected="true">Yes</option>
+        <option>No</option>
+      </select>
+    </label>
+
+    <label class="item item-input item-stacked-label" ng-show="direction.currentlocation == 'No'">
+      <span class="input-label">From:</span>
+      <textarea type="text" rows="2" ng-model="direction.origin"  style="white-space:normal" placeholder="Enter starting point - e.g. street name and city, place name or a post code"></textarea>
+    </label>
+
+    <div class="item">To: {{museumName}}</div>
+
+    <label class="item item-input item-select">
+      <div class="input-label">
+        Mode of transport:
+      </div>
+      <select ng-model="direction.mode">
+        <option ng-selected="true" value="driving">Car</option>
+        <option value="walking">Walking</option>
+        <option value="bicycling">Bicycle</option>
+      </select>
+    </label>
+
+    <div class="padding" style="text-align:center">
+      <button type="button" class="button button-calm" style="width: 135px; margin-right: 10px" ng-click="goBack()">Cancel</button>
+      <button class="button button-positive" ng-click="searchDirections()">Get Directions</button>
+    </div>
+
+  </ion-content>
+</ion-view>

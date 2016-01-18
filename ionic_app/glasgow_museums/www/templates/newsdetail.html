@@ -1,0 +1,24 @@
+<ion-view view-title="{{newsItem.exhibition_name}}">
+<ion-nav-title>
+       {{newsItem.exhibition_name}}
+    </ion-nav-title>
+<ion-nav-buttons side="right">
+      <a class="button button-icon ion-android-share-alt" ng-click="share()"></a>
+   </ion-nav-buttons>
+  <ion-content class="padding">
+
+    <div class="list card">
+      <div class="item item-divider wrapping">{{newsItem.exhibition_name}}</div>
+
+      <div class="item item-body">
+        <img ng-src="{{newsItem.images}}" style="width:100%; max-width: 100%">
+        <h2><i class="ion-android-pin"></i> {{newsItem.museum_name}}</h2>
+        <p id="date"><i class="ion-ios-calendar-outline"></i>
+        <span id="date-detail">{{newsItem.start_date | date: 'd MMM yyyy'}} - {{newsItem.end_date | date: 'd MMM yyyy'}}</span></p>
+        <p class="prewrapping">{{newsItem.description}}</p>
+      </div>
+    </div>
+    
+  </ion-content>
+</ion-view>
+

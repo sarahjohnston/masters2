@@ -1,0 +1,16 @@
+<ion-view>
+  <ion-nav-title>
+      <img src="img/app_logo2.png" class="headerimage" alt="Glasgow Museums">
+  </ion-nav-title>
+
+  <ion-content>
+    <div class="row home-grid" ng-repeat="museum in museums" ng-if="$index % 2 === 0">
+        <div class="col col-50" ng-if="$index < museums.length" ng-click="setMuseum({{museums[$index]._id}})">
+            <img ng-src="img/text_{{museums[$index].MainPhoto}}.jpg" width="100%" />
+        </div>
+        <div class="col col-50" ng-if="$index + 1 < museums.length" ng-click="setMuseum({{museums[$index + 1]._id}})">
+            <img ng-src="img/text_{{museums[$index + 1].MainPhoto}}.jpg" width="100%" />
+        </div>
+    </div>
+</ion-content>
+</ion-view>

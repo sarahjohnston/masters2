@@ -1,0 +1,38 @@
+<div class="modal">
+  <ion-header-bar class="bar-positive">
+    <h1 class="title">Add Review</h1>
+  </ion-header-bar>
+  <ion-content>
+    <form name="form" id="form" ng-submit="submitReview()" novalidate>
+      <div class="list">
+        <div ng-init="myreview.rating = star.rating + 1"></div>
+
+        <div class="item">Location: {{title}}</div>
+
+        <div class="item">
+          <div class="star-rating" star-rating rating-value="myreview.rating" data-max="5" on-rating-selected="rateFunction(myreview.rating)"></div>
+          <p style="text-align:center">Please select rating out of 5</p>
+        </div>
+        
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Headline:</span>
+          <input type="text" name="headline" ng-model="myreview.headline" required>
+          <div ng-show="form.$submitted || form.headline.$touched">
+            <span class="form-error" ng-show="form.headline.$error.required">Please enter a headline for your review.</span>
+          </div>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Review:</span>
+          <textarea rows="9" name="reviewText" ng-model="myreview.reviewText" required></textarea>
+          <div ng-show="form.$submitted || form.reviewText.$touched">
+            <span class="form-error" ng-show="form.reviewText.$error.required">Please enter your review.</span>
+          </div>
+        </label>
+      </div>
+      <div style="text-align:center">
+      <button type="button" class="button button-calm" style="width: 135px; margin-right: 10px" ng-click="closeModal()">Cancel</button>
+      <button type ="submit" class="button button-positive" style="width: 135px">Submit Review</button>
+      </div>
+    </form>
+  </ion-content>
+</div>

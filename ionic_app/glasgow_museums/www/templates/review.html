@@ -1,0 +1,41 @@
+<ion-nav-bar>
+  <ion-nav-back-button>
+  </ion-nav-back-button>
+</ion-nav-bar>
+<ion-view view-title="{{title}}">
+  <ion-nav-title>{{title}}</ion-nav-title>
+
+  <ion-nav-buttons side="right">
+    <a class="button button-icon ion-android-add" ng-click="openModal()"></a>
+  </ion-nav-buttons>
+
+  <ion-content>
+    <div class="item item-divider">
+      <h2>Reviews</h2>
+    </div>
+    <div class="padding" ng-if="dataError">
+      <p>{{dataError}}</p>
+      <button class="button button-small button-positive" ng-click="searchReviews(id)">Try Again</button>
+    </div>
+        <ion-list>
+          <ion-item ng-repeat="review in reviews">
+            <h2>"{{review.Headline}}"</h2>
+            <div class="reviewRating">
+              <i class="icon ion-android-star rating-icon" ng-if="review.Rating >= 1"></i>
+              <i class="icon ion-android-star rating-icon" ng-if="review.Rating >= 2"></i>
+              <i class="icon ion-android-star rating-icon" ng-if="review.Rating >= 3"></i>
+              <i class="icon ion-android-star rating-icon" ng-if="review.Rating >= 4"></i>
+              <i class="icon ion-android-star rating-icon" ng-if="review.Rating >= 5"></i>
+              <i class="icon ion-android-star-outline rating-icon" ng-if="review.Rating <= 4"></i>
+              <i class="icon ion-android-star-outline rating-icon" ng-if="review.Rating <= 3"></i>
+              <i class="icon ion-android-star-outline rating-icon" ng-if="review.Rating <= 2"></i>
+              <i class="icon ion-android-star-outline rating-icon" ng-if="review.Rating <= 1"></i>
+              <span class="reviewDate">{{review.ReviewDate | date: 'd MMM yyyy'}}</span>
+            </div>
+            <p dd-text-collapse dd-text-collapse-max-length="200" dd-text-collapse-text="{{review.ReviewText}}" class="dd-collapse"></p>
+          </ion-item>
+       </ion-list>
+
+  </ion-content>
+</ion-view>
+

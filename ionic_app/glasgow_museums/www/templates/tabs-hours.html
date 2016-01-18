@@ -1,0 +1,24 @@
+<ion-view view-title="{{museum.MuseumName}}" ng-controller="InfoCtrl">
+	<ion-nav-title>
+       {{museum.MuseumName}}
+    </ion-nav-title>
+  <ion-nav-buttons side="left">
+      <a class="button button-icon ion-android-home" ui-sref="tab.home"></a>
+   </ion-nav-buttons>
+   <ion-nav-buttons side="right">
+      <a class="button button-icon ion-android-home transp"></a>
+   </ion-nav-buttons>
+  <ion-content>
+    <h4 class="padding" style="padding-bottom:0">Current Opening Hours</h4>
+    <div class="list list-inset opening">
+    <div class="item hours">Sunday: {{museum.opening[0]}}</div>
+    <div class="item hours">Monday: {{museum.opening[1]}}</div>
+    <div class="item hours">Tuesday: {{museum.opening[2]}}</div>
+    <div class="item hours">Wednesday: {{museum.opening[3]}}</div>
+    <div class="item hours">Thursday: {{museum.opening[4]}}</div>
+    <div class="item hours">Friday: {{museum.opening[5]}}</div>
+    <div class="item hours">Saturday: {{museum.opening[6]}}</div>
+    </div>
+    <p ng-if="museum.Opening_notes.length > 1">Notes: {{museum.Opening_notes}}</p>
+  </ion-content>
+</ion-view>

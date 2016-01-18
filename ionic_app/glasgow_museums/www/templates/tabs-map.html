@@ -1,0 +1,13 @@
+<ion-view view-title="{{title}}">
+  <ion-nav-title>{{title}}</ion-nav-title>
+	<ion-nav-buttons side="left">
+      <a class="button button-icon ion-android-home" ui-sref="tab.home"></a>
+   </ion-nav-buttons>
+   <ion-nav-buttons side="right">
+      <a class="button button-icon ion-android-home transp"></a>
+   </ion-nav-buttons>
+  <ion-content>
+   	<div id="map" data-tap-disabled="true"></div>
+   	<button class="button button-positive directions" ui-sref="directions">Directions</button>
+  </ion-content>
+</ion-view>
