@@ -164,7 +164,6 @@ public class DataBaseSQLHelper extends SQLiteOpenHelper {
     public Museum getMuseum(int id) {
         SQLiteDatabase db = getReadableDatabase();
 
-        //Cursor cursor = db.query(TABLE_NAME, COLUMNS, COLUMN_ID + "=?", new String[] { String.valueOf(id) }, null, null, null, null);
         Cursor cursor = db.query(TABLE_NAME, null, COLUMN_ID + "=?", new String[] { String.valueOf(id) }, null, null, null, null);
 
         if (cursor != null)

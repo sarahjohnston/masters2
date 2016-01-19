@@ -81,23 +81,11 @@ public class NewsDetailActivity extends Activity {
             if (ab != null) {
                 ab.setTitle(itemName);
             }
-            /*Picasso.with(this).load(item.getItem_image()).
-                placeholder(R.drawable.placeholder_image).
-                into(detailImage);*/
+
             String shareBody = itemName + " at " + museumName + " from ";
             shareBody += exhibitionDate + " " + linkUrl;
             mShareIntent.setType("text/plain");
             mShareIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
-
-            /*final Button more_info = (Button)findViewById(R.id.detailMore);
-            more_info.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Uri webpage = Uri.parse(linkUrl);
-                    Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
-                    startActivity(intent);
-                }
-            });*/
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -130,7 +118,6 @@ public class NewsDetailActivity extends Activity {
                 return true;
             case R.id.action_share:
                 // do share
-                //startActivity(mShareIntent);
                 startActivityForResult(mShareIntent, 111);
                 //return true;
             default:

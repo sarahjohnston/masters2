@@ -210,8 +210,6 @@ public class DirectionsActivity extends Activity implements AdapterView.OnItemSe
 
         }
         String destination = String.valueOf(loc[0]) + "," + String.valueOf(loc[1]);
-        //fetch directions
-        //fetchDirections(origin, destination, mode);
 
         if (errors) {
             //show error toast
@@ -220,6 +218,7 @@ public class DirectionsActivity extends Activity implements AdapterView.OnItemSe
             toast.show();
         }
         else {
+            //open new activity to fetch directions
             Intent mIntent = new Intent(this, DirectionsResultsActivity.class);
             mIntent.putExtra("origin", origin_string);
             mIntent.putExtra("museumName", museumName);

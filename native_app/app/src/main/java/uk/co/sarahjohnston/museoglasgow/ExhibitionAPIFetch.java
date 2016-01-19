@@ -1,8 +1,5 @@
 package uk.co.sarahjohnston.museoglasgow;
 
-import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.net.Uri;
 import android.util.Log;
 
@@ -110,7 +107,6 @@ public class ExhibitionAPIFetch {
         else {
             //error
             Log.d("Error:", "Problem retrieving from web service");
-            return;
         }
     }
 

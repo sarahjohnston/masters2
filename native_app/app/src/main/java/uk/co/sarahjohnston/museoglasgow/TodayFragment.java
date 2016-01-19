@@ -123,10 +123,8 @@ public class TodayFragment extends Fragment {
         lvResults.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View item, int position, long rowId) {
-                //Toast.makeText(getBaseContext(), "List item clicked: " + String.valueOf(position), Toast.LENGTH_SHORT).show();
                 JsonNewsItem jsonItem = adapter.getItem(position);
                 String passItem = jsonItem.getNewsObject().toString();
-                //Log.d("JSON to send in extra", passItem);
                 Intent i = new Intent(getActivity(), NewsDetailActivity.class);
                 i.putExtra(NEWS_ITEM, passItem);
                 startActivity(i);
@@ -161,7 +159,7 @@ public class TodayFragment extends Fragment {
         }
 
         else {
-            Log.d("Connection status", "not connected");
+            //Log.d("Connection status", "not connected");
             CONNECTION_STATUS = DISCONNECTED;
             lvResults.setVisibility(View.GONE);
             errorLayout.setVisibility(View.VISIBLE);

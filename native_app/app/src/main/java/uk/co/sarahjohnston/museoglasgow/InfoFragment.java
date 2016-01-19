@@ -81,9 +81,7 @@ public class InfoFragment extends Fragment {
         address.setText(thisMuseum.get_AddressText());
         description.setText(Html.fromHtml(thisMuseum.get_description()));
 
-        //Log.d("Picture name", currentMuseum.get_mainImage());
         int resID = getResources().getIdentifier(thisMuseum.get_mainImage(),"drawable",activity.getPackageName());
-        //int resID = R.drawable.kelvingrove;
         mainImage.setImageResource(resID);
 
         if (checkForNetwork()) {
@@ -92,14 +90,10 @@ public class InfoFragment extends Fragment {
             new FetchRatingsTask().execute();
         }
         else {
-            Log.d("Connection status", "not connected");
+            //Log.d("Connection status", "not connected");
             CONNECTION_STATUS = DISCONNECTED;
-            //ratingBar.setVisibility(View.GONE);
-
 
         }
-
-        //getRating(thisMuseum.getId());
 
         return view;
     }

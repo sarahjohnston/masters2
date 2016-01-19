@@ -191,7 +191,6 @@ public class ReviewsActivityFragment extends Fragment {
                 Intent i = new Intent(getActivity(), ReviewFormActivity.class);
                 i.putExtra("museumName", museumName);
                 i.putExtra("placeID", placeID);
-                //startActivity(i);
                 startActivityForResult(i, 1);
             default:
                 return super.onOptionsItemSelected(item);
@@ -202,7 +201,6 @@ public class ReviewsActivityFragment extends Fragment {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         getActivity();
-        //Log.d("resultcode", String.valueOf(resultCode));
 
         if(requestCode == 1 && resultCode == Activity.RESULT_OK) {
             //refresh reviews

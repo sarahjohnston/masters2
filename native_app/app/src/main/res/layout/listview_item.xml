@@ -12,5 +12,4 @@
         android:text="Museum Name"
         android:id="@+id/museum_name" />
 
-
 </LinearLayout>

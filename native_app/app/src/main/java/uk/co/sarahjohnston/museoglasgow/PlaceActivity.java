@@ -53,11 +53,7 @@ public class PlaceActivity extends FragmentActivity {
             ab.setTitle(currentMuseum.get_museumName());
             ab.setElevation(0);
 
-            // Define SlidingTabLayout (shown at top)
-            // and ViewPager (shown at bottom) in the layout.
-            // Get their instances.
             slidingTabLayout = (SlidingTabLayout) findViewById(R.id.tab);
-            //slidingTabLayout.setCustomTabView(R.layout.tab_item, R.id.tab_name);
             viewPager = (NonSwipeableViewPager) findViewById(R.id.viewpager);
 
             // create a fragment list in order.
@@ -99,7 +95,7 @@ public class PlaceActivity extends FragmentActivity {
     public void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         //Log.d("LIFECYCLE", "ON RESTORE");
-        // Restore state members from saved instance
+        // Restore id from saved instance
         singleID = savedInstanceState.getInt("singleID");
         Log.d("Restored", String.valueOf(singleID));
     }

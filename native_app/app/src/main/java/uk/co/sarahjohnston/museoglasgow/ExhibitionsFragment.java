@@ -156,7 +156,6 @@ public class ExhibitionsFragment extends Fragment {
         lvResults.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View item, int position, long rowId) {
-                //Toast.makeText(getBaseContext(), "List item clicked: " + String.valueOf(position), Toast.LENGTH_SHORT).show();
                 JsonNewsItem jsonItem = adapter.getItem(position);
                 String passItem = jsonItem.getNewsObject().toString();
                 Log.d("JSON to send in extra", passItem);

@@ -54,13 +54,5 @@
             android:id="@+id/detailDescription"
             android:layout_marginTop="5dp"/>
 
-        <!--<Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/detailMore"
-            android:text="@string/view_on_web"
-            android:layout_marginTop="10dp"
-            android:background="@color/primary"
-            android:textColor="#ffffff"/>-->
     </LinearLayout>
 </ScrollView>

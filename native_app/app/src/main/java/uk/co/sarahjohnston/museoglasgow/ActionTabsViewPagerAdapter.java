@@ -22,7 +22,6 @@ public class ActionTabsViewPagerAdapter extends FragmentPagerAdapter {
     public static final String UI_TAB_INFO = "INFO";
     public static final String UI_TAB_HOURS = "HOURS";
     public static final String UI_TAB_FIND = "MAP";
-    //public static final String UI_TAB_EXHIBITIONS = "EXHIBITIONS";
     public static final String UI_TAB_EXHIBITIONS = "WHAT'S ON";
 
     public ActionTabsViewPagerAdapter(FragmentManager fm, ArrayList<Fragment> fragments){

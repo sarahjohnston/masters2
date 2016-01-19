@@ -61,14 +61,11 @@ public class HomeFragment extends Fragment {
 
         mDataBaseSQLHelper.createDatabase();
 
-        //int dbCount = mDataBaseSQLHelper.getDatabaseCount();
-        //Log.d("Number of records", String.valueOf(dbCount));
-
         DisplayMetrics displayMetrics = this.getResources().getDisplayMetrics();
 
-        float dpHeight = displayMetrics.heightPixels / displayMetrics.density;
+        //float dpHeight = displayMetrics.heightPixels / displayMetrics.density;
         float dpWidth = displayMetrics.widthPixels / displayMetrics.density;
-        Log.d("SCREEN SIZE", "Width: " + String.valueOf(dpWidth) + "dp, Height: " + String.valueOf(dpHeight) + "dp");
+        //Log.d("SCREEN SIZE", "Width: " + String.valueOf(dpWidth) + "dp, Height: " + String.valueOf(dpHeight) + "dp");
 
         float gridItemWidth = dpWidth / 2;
         gridItemW = (int)gridItemWidth;
@@ -134,18 +131,8 @@ public class HomeFragment extends Fragment {
 
             Museum currentMuseum = Museums.get(position);
 
-            String now = String.valueOf(currentMuseum.getId());
-
-            //TextView museum_name = (TextView) view.findViewById(R.id.museum_name);
-            //museum_name.setText(currentMuseum.get_museumName());
-
             int resID = getResources().getIdentifier("text_" + currentMuseum.get_mainImage(), "drawable", getActivity().getPackageName());
-            //int resID = R.drawable.kelvingrove;
-            //Log.d("resID", String.valueOf(resID));
             ImageView thumbnail = (ImageView)view.findViewById(R.id.museum_thumbnail);
-            //thumbnail.setMaxWidth(gridItemW);
-            //thumbnail.setMaxHeight(thumbnailHeight);
-            //thumbnail.getLayoutParams().height = thumbnailHeight;
             thumbnail.setImageResource(resID);
 
             return view;
