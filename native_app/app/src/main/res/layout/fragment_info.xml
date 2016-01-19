@@ -1,0 +1,100 @@
+<ScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="uk.co.sarahjohnston.museoglasgow.InfoFragment"
+android:id="@+id/scrollView"
+    >
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mainImage"
+            android:contentDescription="@string/museum_image_alt"
+            android:cropToPadding="false"
+            android:adjustViewBounds="true"
+            android:minHeight="100dp"
+            android:nestedScrollingEnabled="true"
+            android:src="@drawable/kelvingrove"/>
+
+        <TextView
+            android:text="@string/placename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/placeName"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            />
+
+        <TextView
+            android:text="Address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:id="@+id/address"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+
+            <RatingBar
+                android:id="@+id/setRating"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:stepSize="0.1"
+                android:layout_gravity="center_vertical|left"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"/>
+
+            <Button
+                style="@style/buttonsSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:text="Reviews"
+                android:id="@+id/reviewButton"
+                android:layout_gravity="right"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:text="@string/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/description"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+</ScrollView>
+
+
+
+

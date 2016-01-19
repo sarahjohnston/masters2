@@ -1,0 +1,66 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="@android:style/Theme.Material.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:windowBackground">@color/white_opaque</item>
+    </style>
+
+    <color name="white_opaque">#ffffffff</color>
+    <!--<color name="primary">#ff4d9364</color>-->
+    <!--<color name="primary">#5a7639</color>-->
+    <color name="primary">#006bb3</color>
+    <!--<color name="primary_dark">#49602e</color>-->
+    <color name="primary_dark">#004c80</color>
+
+    <!--<color name="primary_light">#6e8b4c</color>-->
+    <color name="primary_light">#2b88c6</color>
+    <color name="error_red">#a30000</color>
+
+    <style name="OpenTimes1" parent="@android:style/TextAppearance.Medium">
+        <!--<item name="android:background">#ce4d9364</item>-->
+        <!--<item name="android:background">#a9bc94</item>-->
+        <item name="android:background">#eaf6ff</item>
+        <item name="android:padding">6dp</item>
+        <item name="android:layout_margin">4dp</item>
+    </style>
+
+    <style name="OpenTimes2" parent="@style/OpenTimes1">
+        <!--<item name="android:background">#7a4d9364</item>-->
+        <!--<item name="android:background">#7e9365</item>-->
+        <item name="android:background">#c2e2ff</item>
+    </style>
+
+    <style name="fullscreenDialog" parent="AppTheme" >
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="buttonsGeneral">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center_horizontal|center_vertical</item>
+        <item name="android:background">@drawable/buttons</item>
+    </style>
+
+    <style name="buttonsCancel" parent="buttonsGeneral">
+        <item name="android:background">@drawable/buttons_red</item>
+    </style>
+
+    <style name="buttonsSmall" parent="buttonsGeneral">
+        <item name="android:background">@drawable/buttons_small</item>
+    </style>
+
+
+
+    <!--<style name="ratingIndicator" parent="android:Widget.Material.RatingBar.Small">
+        <item name="android:progressTint">@color/primary_dark</item>
+        <item name="android:progressBackgroundTint">#a4cfd4</item>
+        <item name="android:secondaryProgressTint">#515151</item>
+        <item name="android:progressTintMode">src_over</item>
+    </style>-->
+
+
+</resources>

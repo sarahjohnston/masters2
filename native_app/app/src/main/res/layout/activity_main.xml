@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="uk.co.sarahjohnston.museoglasgow.MainActivity">
+
+    <uk.co.sarahjohnston.museoglasgow.view.SlidingTabLayout
+        android:id="@+id/tab"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:color="@color/white_opaque"
+        />
+
+    <!--<android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/tab"/>-->
+
+    <uk.co.sarahjohnston.museoglasgow.NonSwipeableViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/tab"/>
+
+</RelativeLayout>
